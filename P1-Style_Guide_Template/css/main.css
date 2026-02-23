@@ -1,0 +1,1223 @@
+/*
+  STYLE GUIDE STYLING 
+  FormGuide - Style Guide CSS
+  Brand Colors (Adobe Acrobat-inspired):
+  - Trust Blue: #1F4788 (Adobe-inspired deep professional blue)
+  - Support Green: #2D9D78 (Adobe-inspired success green)
+  - Canadian Red: #D04423 (Adobe red - trustworthy accent)
+  - Warm Gray: #6B7280
+  - Alert Orange: #F59E0B
+  - Background White: #FFFFFF
+  - Text Dark: #1F2937
+*/
+
+/* ============================================
+   BASE STYLES & TYPOGRAPHY HIERARCHY
+   ============================================ */
+
+/* Include padding/border in element width (no overflow surprises): https://www.w3schools.com/ */
+* {
+  box-sizing: border-box;
+}
+
+/* rem = root-relative size (accessibility); line-height for readability: https://www.w3schools.com/ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1F2937;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  line-height: 1.6;
+  max-width: 1200px;
+  /* Center block: margin auto with max-width: https://www.runoob.com/html/html-tutorial.html */
+  margin: 0 auto;
+}
+
+/* Clear Type Hierarchy */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1F4788;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #1F4788;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1F4788;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #2D9D78;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #1F2937;
+  font-size: 1rem;
+}
+
+/* ============================================
+   STRUCTURE & RELATIONSHIPS
+   ============================================ */
+
+/* border-radius for rounded corners: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+header {
+  background-color: #F9FAFB;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  border-left: 5px solid #1F4788;
+  border-top: 3px solid #D04423;
+}
+
+.element {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-top: 2px solid #E5E7EB;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  /* transition = smooth animation on change: https://www.w3schools.com/ */
+  transition: box-shadow 0.3s ease;
+}
+
+/* :hover pseudo-class for mouse-over state: https://www.runoob.com/html/html-tutorial.html */
+.element:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+/* Flexbox for nav layout; gap avoids margin hacks: https://www.w3schools.com/ (CSS Flexbox). */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+nav a {
+  color: #1F4788;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  border: 2px solid #1F4788;
+  font-weight: 500;
+  /* Smooth hover/focus animation; often not taught in intro courses: https://www.runoob.com/html/html-tutorial.html (see CSS references). */
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+/* :focus styles improve keyboard accessibility; see https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code (MDN CSS reference). */
+nav a:hover,
+nav a:focus {
+  background-color: #1F4788;
+  border-color: #1F4788;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  /* rgba() gives transparent shadows; fourth value is opacity: https://www.runoob.com/html/html-tutorial.html (CSS colors). */
+  box-shadow: 0 4px 8px rgba(31, 71, 136, 0.3);
+  text-decoration: none;
+}
+
+/* ============================================
+   INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* In-text Links - Clear Interaction Cues */
+a {
+  color: #1F4788;
+  text-decoration: underline;
+  text-decoration-color: #1F4788;
+  transition: all 0.3s ease;
+}
+
+/* Ensure text links in paragraphs remain visible */
+p a:hover,
+p a:focus {
+  color: #2D9D78 !important;
+  text-decoration-color: #2D9D78;
+  text-decoration-thickness: 2px;
+  background-color: transparent;
+}
+
+/* Navigation Buttons - Clear Interaction Response */
+.button-nav {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: #FFFFFF;
+  background-color: #1F4788;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 2px solid #1F4788;
+  transition: all 0.3s ease;
+  margin: 0.25rem;
+}
+
+.button-nav:hover,
+.button-nav:focus {
+  background-color: #2D9D78;
+  border-color: #2D9D78;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 157, 120, 0.3);
+  text-decoration: none;
+}
+
+/* Attribute selector [type="submit"] targets by attribute: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+/* Submit/Reset Buttons - Clear Interaction Response */
+button[type="submit"] {
+  background-color: #2D9D78;
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #238765;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 157, 120, 0.3);
+}
+
+button[type="reset"] {
+  background-color: #6B7280;
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+button[type="reset"]:hover,
+button[type="reset"]:focus {
+  background-color: #4B5563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(107, 114, 128, 0.3);
+}
+
+/* Text Input Fields - Clear Interaction Cues */
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border: 2px solid #6B7280;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* :focus + outline for keyboard accessibility: https://www.w3schools.com/ */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #1F4788;
+  box-shadow: 0 0 0 3px rgba(31, 71, 136, 0.1);
+}
+
+input[type="text"]:hover {
+  border-color: #1F4788;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+/* Radio Buttons - Clear Interaction Cues */
+input[type="radio"] {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  /* accent-color styles native form control (modern browsers): https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+  accent-color: #1F4788;
+}
+
+input[type="radio"]:hover {
+  accent-color: #2D9D78;
+}
+
+/* outline-offset adds space between element and outline: https://www.runoob.com/html/html-tutorial.html */
+input[type="radio"]:focus {
+  outline: 2px solid #1F4788;
+  outline-offset: 2px;
+}
+
+/* :has() = parent selector (modern CSS): https://www.w3schools.com/ */
+label:has(input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+label:has(input[type="radio"]):hover {
+  background-color: #F3F4F6;
+}
+
+/* Image as Link - Clear Interaction Response */
+a img {
+  border: 3px solid #E5E7EB;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+/* transform for visual feedback: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+a:hover img,
+a:focus img {
+  border-color: #1F4788;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(31, 71, 136, 0.2);
+}
+
+/* ============================================
+   TEXT ELEMENTS
+   ============================================ */
+
+ol, ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  color: #1F2937;
+}
+
+ol li, ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   COMBINED ELEMENTS
+   ============================================ */
+
+/* CSS Grid: 1fr = fraction of space; https://www.w3schools.com/ */
+/* Service Listing - Layout */
+.service-listing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Media query = responsive breakpoint: https://www.runoob.com/html/html-tutorial.html */
+@media (max-width: 900px) {
+  .service-listing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-listing.service-card {
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  transition: border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-listing.service-card:hover {
+  border-color: #1F4788;
+}
+
+/* text-transform, letter-spacing for typography: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+.service-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.35rem 0;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  color: #1F4788;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.service-hero-single {
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+.service-hero-single img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  display: block;
+  transition: border-color 0.2s ease;
+}
+
+.service-hero-single:hover img,
+.service-hero-single:focus img {
+  border-color: #1F4788;
+}
+
+.service-files-label {
+  font-size: 0.8rem;
+  color: #6B7280;
+  margin: 0 0 0.5rem 0;
+}
+
+.service-form-thumbs {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem 0;
+}
+
+/* flex: 1 shares space; min-width: 0 prevents overflow in flex: https://www.w3schools.com/ */
+.service-form-item {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.service-form-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+  display: block;
+  transition: border-color 0.2s ease;
+}
+
+.service-form-item a:hover img,
+.service-form-item a:focus img {
+  border-color: #1F4788;
+}
+
+.service-form-item figcaption {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-top: 0.35rem;
+  text-align: center;
+}
+
+.service-listing a img {
+  cursor: pointer;
+}
+
+/* margin-top: auto pushes content to bottom in flex column: https://www.runoob.com/html/html-tutorial.html */
+.service-desc {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.service-desc p {
+  margin: 0.35rem 0;
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+.service-desc .button-nav {
+  margin-top: 0.75rem;
+}
+
+/* Legacy service-listing (if used elsewhere) */
+.service-listing h3:not(.service-title) {
+  color: #1F4788;
+  margin-top: 0;
+}
+
+/* :last-of-type pseudo-class: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+.service-listing p:last-of-type {
+  color: #2D9D78;
+  font-weight: 600;
+}
+
+/* Payment Form - Clear Structure with Credit Card Icon */
+.payment-container {
+  margin-top: 1rem;
+}
+
+form {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #F9FAFB;
+  max-width: 600px;
+  width: 100%;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #1F4788;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.checkout-button:hover,
+.checkout-button:focus {
+  background-color: #2D9D78;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 157, 120, 0.3);
+}
+
+form h4 {
+  color: #1F4788;
+  margin-top: 0;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.payment-icon {
+  font-size: 1.5rem;
+  color: #1F4788;
+}
+
+/* vertical-align for inline/inline-block alignment: https://www.runoob.com/html/html-tutorial.html */
+.payment-card-icon {
+  width: 40px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.payment-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.payment-section label {
+  font-weight: 600;
+  color: #1F2937;
+}
+
+/* Cart - Clear Structure */
+.cart {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  background-color: #F9FAFB;
+  max-width: 500px;
+}
+
+.cart h3 {
+  color: #1F4788;
+  margin-top: 0;
+  border-bottom: 2px solid #2D9D78;
+  padding-bottom: 0.5rem;
+}
+
+/* justify-content: space-between; gap in flex: https://www.w3schools.com/ */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  border-left: 4px solid #2D9D78;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 1rem;
+}
+
+.cart-item:hover {
+  background-color: #F3F4F6;
+  border-left-color: #1F4788;
+}
+
+/* flex-shrink: 0 keeps item from shrinking in flex: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+.cart-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #1F4788;
+  flex-shrink: 0;
+}
+
+.cart-item p {
+  margin: 0;
+  flex: 1;
+}
+
+/* :last-child targets last child only: https://www.runoob.com/html/html-tutorial.html */
+.cart p:last-child {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1F4788;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #E5E7EB;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
+/* overflow-x: auto = horizontal scroll if content is wide: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+code {
+  background-color: #F3F4F6;
+  padding: 1rem;
+  display: block;
+  border-radius: 6px;
+  border-left: 4px solid #6B7280;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #1F2937;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* ============================================
+   BRANDING SECTIONS
+   ============================================ */
+
+#branding .element,
+#brand_components .element {
+  background-color: #F9FAFB;
+  border-left: 5px solid #2D9D78;
+  border-top: 2px solid #D04423;
+}
+
+#brand_components .element h3 {
+  color: #1F4788;
+}
+
+/* Font samples — Arial, Helvetica, sans-serif */
+.font-sample-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.font-sample-block {
+  flex: 1;
+  min-width: 220px;
+}
+
+.font-sample-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1F4788;
+  margin: 0 0 0.5rem 0;
+}
+
+.font-sample-texts {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background-color: #F9FAFB;
+  margin: 0;
+}
+
+.font-sample-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1F4788;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.font-sample-paragraph {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #1F2937;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+  max-width: 32ch;
+}
+
+.font-sample-paragraph:last-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.font-sample-small {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Font display — same structure as colour swatches */
+.font-showcase {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.font-item {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.font-swatch {
+  min-height: 180px;
+  border-radius: 8px;
+  border: 2px solid #1F4788;
+  padding: 1.5rem;
+  margin: 0.5rem 0;
+  background-color: #F9FAFB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.font-swatch-letters {
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #1F2937;
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.font-swatch-numbers {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #1F2937;
+  display: block;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.font-swatch-sentence {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #1F2937;
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.font-swatch-body {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #6B7280;
+  display: block;
+  line-height: 1.6;
+}
+
+.font-swatch-label {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin: 0.75rem 0 0;
+  font-style: normal;
+}
+
+.font-item code {
+  display: block;
+  margin: 0.5rem 0;
+  background-color: #F3F4F6;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* repeat(auto-fit, minmax()) = responsive grid without media queries: https://www.w3schools.com/ */
+.font-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.font-example {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #F9FAFB;
+}
+
+.font-example h5 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #1F4788;
+  font-size: 1rem;
+}
+
+.font-example code {
+  display: block;
+  margin: 0.5rem 0;
+  background-color: #F3F4F6;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.font-example-display {
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+.font-display-heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1F4788;
+  line-height: 1.2;
+}
+
+.font-display-body {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #1F2937;
+  line-height: 1.6;
+}
+
+.font-display-nav {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+#brand_components ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+#brand_components ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Color Swatches for Brand Components */
+.color-swatch {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  border: 2px solid #E5E7EB;
+  vertical-align: middle;
+}
+
+.color-showcase {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.color-item {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.color-item code {
+  display: block;
+  margin: 0.5rem 0;
+  background-color: #F3F4F6;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.color-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.color-example {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #F9FAFB;
+}
+
+.color-example h5 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #1F4788;
+  font-size: 1rem;
+}
+
+.color-example code {
+  display: block;
+  margin: 0.5rem 0;
+  background-color: #F3F4F6;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.example-box {
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* Imagery showcase */
+.imagery-showcase {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.imagery-item {
+  margin: 0;
+  text-align: center;
+}
+
+.imagery-img {
+  max-width: 200px;
+  height: auto;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  display: block;
+}
+
+.imagery-icon {
+  width: 60px;
+  height: auto;
+  border: 2px solid #E5E7EB;
+  border-radius: 6px;
+  display: block;
+}
+
+.imagery-item figcaption {
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin-top: 0.5rem;
+  max-width: 200px;
+}
+
+.imagery-showcase-icons .imagery-item figcaption {
+  max-width: 120px;
+}
+
+/* How brand components work together */
+.component-combo {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+}
+
+.service-card-demo {
+  max-width: 400px;
+}
+
+.service-card-demo .combo-heading {
+  margin: 0 0 0.75rem 0;
+  color: #1F4788;
+  font-size: 1.35rem;
+}
+
+.service-card-demo .combo-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #E5E7EB;
+  margin: 0.75rem 0;
+}
+
+.service-card-demo .combo-body {
+  margin: 0.5rem 0 1rem 0;
+  color: #1F2937;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.service-card-demo .combo-cta {
+  display: inline-block;
+}
+
+.payment-row-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.payment-option-demo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 2px solid #E5E7EB;
+  transition: border-color 0.2s ease;
+}
+
+.payment-option-demo:hover {
+  border-color: #1F4788;
+}
+
+.payment-option-demo input[type="radio"] {
+  accent-color: #1F4788;
+}
+
+/* ============================================
+   CITATIONS
+   ============================================ */
+
+#citations {
+  background-color: #F9FAFB;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+/* list-style-type: none removes bullets: https://www.w3schools.com/ */
+#citations ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#citations li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid #6B7280;
+}
+
+/* ============================================
+   RESPONSIVE CONSIDERATIONS
+   ============================================ */
+/* Breakpoints change layout at different screen sizes: https://www.runoob.com/html/html-tutorial.html */
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  nav {
+    flex-direction: column;
+  }
+  
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .payment-container {
+    flex-direction: column;
+  }
+  
+  .payment-image {
+    width: 100%;
+  }
+  
+  .color-showcase {
+    flex-direction: column;
+  }
+  
+  .color-examples {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   PAGE LAYOUT (SERVICES & CHECKOUT PAGES)
+   ============================================ */
+
+/* Page header: logo left, nav right; justify-content: space-between: https://www.w3schools.com/ */
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  background-color: #F9FAFB;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 5px solid #1F4788;
+  border-top: 3px solid #D04423;
+}
+
+/* Logo/brand text in header */
+.page-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1F4788;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.page-header nav {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Pill-style nav links: dark text so always readable (avoid white-on-white); hover = blue fill + white text: https://www.w3schools.com/ */
+.page-header nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 2px solid #1F4788;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.page-header nav a:hover,
+.page-header nav a:focus {
+  background-color: #1F4788;
+  color: #FFFFFF;
+  border-color: #1F4788;
+}
+
+/* Two-column layout: cart left, checkout form right; gap = space between columns: https://www.runoob.com/html/html-tutorial.html */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+/* Vertical divider between cart and checkout; border-left on second column: https://www.w3schools.com/ */
+.checkout-form-column {
+  border-left: 1px solid #E5E7EB;
+  padding-left: 2rem;
+}
+
+/* Cart column uses existing .cart styles; ensure it doesn't stretch */
+.checkout-cart-column .cart {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+  .checkout-form-column {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 2rem;
+  }
+}
+
+/* Textarea and select to match text inputs: https://www.w3schools.com/ */
+textarea,
+select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border: 2px solid #6B7280;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #1F4788;
+}
+select {
+  cursor: pointer;
+}
+
+/* Checkout form section title */
+.checkout-form-column h3 {
+  margin-top: 0;
+  color: #1F4788;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2D9D78;
+}
+
+/* Label for form fields (first name, last name, etc.) */
+.checkout-form-column label {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Inputs in checkout: full width in column */
+.checkout-form-column input[type="text"] {
+  max-width: 100%;
+}
+
+/* Submit button in checkout column */
+.checkout-form-column button[type="submit"] {
+  width: 100%;
+  margin-top: 1.5rem;
+}

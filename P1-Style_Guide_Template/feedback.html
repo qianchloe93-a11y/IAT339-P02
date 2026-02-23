@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback on a Product or Service | FormGuide</title>
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="page-header">
+      <a href="index.html" class="page-logo">FormGuide</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Forms</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="updates.html">Updates</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Feedback on a Product or Service</h1>
+      <p>Tell us how we did. Your feedback helps us improve our form guides.</p>
+
+      <section class="element">
+        <h2>Submit feedback</h2>
+        <p>Choose the guide or service you used, then rate it and add any comments.</p>
+        <form action="#" method="get">
+          <label for="feedback-product">Product or service</label>
+          <select id="feedback-product" name="feedback-product">
+            <option value="">— Select —</option>
+            <option value="study-permit">Study Permit Extension Form Guide</option>
+            <option value="visitor-visa">Visitor Visa Form Guide</option>
+            <option value="other">Other / general</option>
+          </select>
+          <label for="feedback-rating">Rating (1–5 stars)</label>
+          <select id="feedback-rating" name="feedback-rating">
+            <option value="">— Select —</option>
+            <option value="5">5 – Very helpful</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 – Not helpful</option>
+          </select>
+          <label for="feedback-comment">Comments (optional)</label>
+          <textarea id="feedback-comment" name="feedback-comment" rows="4" placeholder="What worked well? What could we improve?"></textarea>
+          <button type="submit">Submit feedback</button>
+        </form>
+      </section>
+    </main>
+
+  </body>
+</html>

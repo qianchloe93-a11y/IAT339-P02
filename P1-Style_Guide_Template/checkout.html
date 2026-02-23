@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Use correct document type: https://www.runoob.com/html/html5-syntax.html -->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | FormGuide</title>
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Page header: same as services page; nav for consistency: https://www.w3schools.com/tags/tag_code.asp -->
+    <header class="page-header">
+      <a href="index.html" class="page-logo">FormGuide</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Forms</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="updates.html">Updates</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Two-column layout: cart left, checkout form right (reference: classmate layout) -->
+      <div class="checkout-layout">
+        <!-- Left column: Checkout Cart (your content - FormGuide items) -->
+        <div class="checkout-cart-column">
+          <h2>Checkout Cart</h2>
+          <div class="cart">
+            <h3>Shopping Cart</h3>
+            <!-- checked = pre-selected state: https://www.runoob.com/html/html-tutorial.html -->
+            <label class="cart-item">
+              <input type="checkbox" checked>
+              <p>Study Permit Extension Form Guide</p>
+              <p>$0.49</p>
+            </label>
+            <label class="cart-item">
+              <input type="checkbox" checked>
+              <p>Visitor Visa Form Guide</p>
+              <p>$0.49</p>
+            </label>
+            <p>Total: $0.98</p>
+          </div>
+        </div>
+
+        <!-- Right column: Checkout form (detailed layout like classmate - Visa/Mastercard, First/Last name, Card number, Expiration, CVV): https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+        <div class="checkout-form-column">
+          <h3>Checkout</h3>
+          <!-- action = submit URL; method = get or post: https://www.runoob.com/html/html5-syntax.html -->
+          <form action="#" method="get">
+            <p><strong>Payment plan</strong></p>
+            <label class="payment-method">
+              <input type="radio" name="payment-plan" value="one-time" checked> One-time purchase ($0.49 per guide)
+            </label>
+            <label class="payment-method">
+              <input type="radio" name="payment-plan" value="monthly"> Monthly payment ($2.99/month, cancel anytime)
+            </label>
+
+            <p><strong>Payment method</strong></p>
+            <label class="payment-method">
+              <input type="radio" name="payment-card" value="visa" checked> Visa
+            </label>
+            <label class="payment-method">
+              <input type="radio" name="payment-card" value="mastercard"> Mastercard
+            </label>
+
+            <!-- for/id link label to input for accessibility: https://www.w3schools.com/tags/tag_code.asp -->
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Chloe">
+
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Qian">
+
+            <label for="card-number">Card number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000">
+
+            <!-- placeholder shows hint text in field: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+            <label for="card-expiration">Card expiration</label>
+            <input type="text" id="card-expiration" name="card-expiration" placeholder="July 2027">
+
+            <label for="card-security">Card security code</label>
+            <input type="text" id="card-security" name="card-security" placeholder="CVV">
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

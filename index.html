@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!-- lang helps screen readers and search engines: https://www.w3schools.com/ -->
+<html lang="en">
+
+  <head>
+
+    <!-- For non-Latin pages, charset must be set to avoid garbled text: https://www.runoob.com/html/html-tutorial.html -->
+    <meta charset="utf-8">
+    <!-- Viewport meta makes the page responsive on different screen sizes: https://www.w3schools.com/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P01 - Style Guide | FormGuide</title>
+
+    <!-- Link to external stylesheet: https://www.runoob.com/html/html-tutorial.html -->
+    <link href="css/main.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Semantic section for page header: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+    <header>
+      <h1>P01 - Style Guide</h1>
+
+      <p>Style guide for FormGuide - A service helping Chinese users navigate IRCC forms with ease.</p>
+
+
+      <!-- nav = navigation landmark for accessibility: https://www.w3schools.com/ -->
+      <!-- First row: links to other HTML pages (Service Listing, Checkout, Contact, Updates, Feedback) -->
+      <nav>
+        <a href="services.html">Service Listing</a>
+        <a href="checkout.html">Shopping Cart &amp; Checkout</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="updates.html">Updates</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="#interactive_elements">Interactive Elements</a>
+        <a href="#text_elements">Text Elements</a>
+        <a href="#combined_elements">Combined Elements</a>
+        <a href="#branding">Branding</a>
+        <a href="#brand_components">Brand Components</a>
+        <a href="#citations">Citations</a>
+      </nav>
+
+    </header>
+
+    <!-- id creates anchor target for in-page links: https://www.runoob.com/html/html-tutorial.html -->
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+      <h2>Interactive Elements</h2>
+
+
+      <section class="element">
+        <h3>In-text link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>a</p>
+
+        <h4>Sample code:</h4>
+        <!-- <code> marks short computer code; use <pre> for multi-line: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+        <code>&lt;p&gt;Visit our &lt;a href="#"&gt;guide page&lt;/a&gt; for more information.&lt;/p&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <p>Visit our <a href="#">guide page</a> for more information.</p>
+      </section>
+
+
+      <section class="element">
+        <h3>Navigation Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-nav</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#" class="button-nav"&gt;Get Started&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a class="button-nav" href="#">Get Started</a>
+      </section>
+
+
+      <section class="element">
+        <h3>Submit/Reset Buttons</h3>
+
+        <h4>CSS selector:</h4>
+        <p>button[type="submit"], button[type="reset"]</p>
+
+        <h4>Sample code:</h4>
+        <!-- type="submit" vs type="reset" on buttons: https://www.w3schools.com/ -->
+        <code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;<br>&lt;button type="reset"&gt;Reset Form&lt;/button&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset Form</button>
+      </section>
+
+
+      <section class="element">
+        <h3>Text Input Field with Label</h3>
+
+        <h4>CSS selector:</h4>
+        <p>input[type="text"], label</p>
+
+        <!-- for/id link label to input; placeholder shows hint: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+        <h4>Sample code:</h4>
+        <code>&lt;label for="name"&gt;Full Name:&lt;/label&gt;<br>&lt;input type="text" id="name" name="name" placeholder="Enter your name"&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+      </section>
+
+
+      <section class="element">
+        <h3>Radio Button with Label</h3>
+
+        <h4>CSS selector:</h4>
+        <p>input[type="radio"], label</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;label&gt;<br>&nbsp;&nbsp;&lt;input type="radio" name="language" value="chinese"&gt; Chinese<br>&lt;/label&gt;<br>&lt;label&gt;<br>&nbsp;&nbsp;&lt;input type="radio" name="language" value="english"&gt; English<br>&lt;/label&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <label>
+          <input type="radio" name="language" value="chinese"> Chinese
+        </label>
+        <label>
+          <input type="radio" name="language" value="english"> English
+        </label>
+      </section>
+
+
+      <section class="element">
+        <h3>Image as a Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>a img</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#"&gt;&lt;img src="visitor visa.png" alt="Form preview"&gt;&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a href="#form-guide">
+          <!-- alt text for accessibility when image fails or for screen readers: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+          <img src="visitor%20visa%20heading%20pic.png" alt="IRCC Form Example - Click to view guide" style="max-width: 300px;">
+        </a>
+      </section>
+
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+      <h2>Text Elements</h2>
+
+      <section class="element">
+        <h3>Headings</h3>
+
+        <h4>CSS selector:</h4>
+        <p>h1, h2, h3, h4</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;h1&gt;Heading 1&lt;/h1&gt;<br>&lt;h2&gt;Heading 2&lt;/h2&gt;<br>&lt;h3&gt;Heading 3&lt;/h3&gt;<br>&lt;h4&gt;Heading 4&lt;/h4&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+      </section>
+
+      <section class="element">
+        <h3>Paragraphs</h3>
+
+        <h4>CSS selector:</h4>
+        <p>p</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;p&gt;FormGuide helps Chinese users navigate complex IRCC forms with step-by-step translations and visual guides. Our service makes immigration paperwork accessible to everyone, regardless of English proficiency.&lt;/p&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <p>FormGuide helps Chinese users navigate complex IRCC forms with step-by-step translations and visual guides. Our service makes immigration paperwork accessible to everyone, regardless of English proficiency.</p>
+      </section>
+
+      <section class="element">
+        <h3>Numbered Lists</h3>
+
+        <h4>CSS selector:</h4>
+        <p>ol, li</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;ol&gt;<br>&nbsp;&nbsp;&lt;li&gt;Select your form type&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Choose your language preference&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Follow the guided instructions&lt;/li&gt;<br>&lt;/ol&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <!-- ol = ordered list (numbered); li = list item: https://www.runoob.com/html/html-tutorial.html -->
+        <ol>
+          <li>Select your form type</li>
+          <li>Choose your language preference</li>
+          <li>Follow the guided instructions</li>
+        </ol>
+      </section>
+
+    </section>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+      <h2>Combined Elements</h2>
+
+      <section class="element">
+        <h3>Main Navigation</h3>
+
+        <h4>CSS selector:</h4>
+        <p>nav</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;nav&gt;<br>&nbsp;&nbsp;&lt;a href="#" class="button-nav"&gt;Home&lt;/a&gt;<br>&nbsp;&nbsp;&lt;a href="#" class="button-nav"&gt;Forms&lt;/a&gt;<br>&nbsp;&nbsp;&lt;a href="#" class="button-nav"&gt;About&lt;/a&gt;<br>&nbsp;&nbsp;&lt;a href="#" class="button-nav"&gt;Contact&lt;/a&gt;<br>&lt;/nav&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <nav>
+          <a href="index.html" class="button-nav">Home</a>
+          <a href="services.html" class="button-nav">Forms</a>
+          <a href="checkout.html" class="button-nav">Checkout</a>
+          <a href="about.html" class="button-nav">About</a>
+          <a href="contact.html" class="button-nav">Contact</a>
+          <a href="updates.html" class="button-nav">Updates</a>
+          <a href="feedback.html" class="button-nav">Feedback</a>
+        </nav>
+      </section>
+
+      <section class="element" id="service_listing">
+        <h3>Service Listing (Study Permit Extension & Visa Applying)</h3>
+
+        <div class="service-listing-grid">
+          <div class="service-listing service-card">
+            <p class="service-label">Study Permit Extension</p>
+            <h3 class="service-title">Study Permit Extension Form Guide</h3>
+            <a href="study-permit-guide.html" class="service-hero-single"><img src="student%20visa%20heading%20pic.png" alt="Study permit"></a>
+            <p class="service-files-label">Forms included:</p>
+            <div class="service-form-thumbs">
+              <!-- figure + figcaption group image with caption: https://www.w3schools.com/ -->
+              <figure class="service-form-item">
+                <a href="study-permit-guide.html"><img src="student%20visa%20form%20options/imm5476.png" alt="IMM5476"></a>
+                <figcaption>1. IMM5476</figcaption>
+              </figure>
+              <figure class="service-form-item">
+                <a href="study-permit-guide.html"><img src="student%20visa%20form%20options/imm5645.png" alt="IMM5645"></a>
+                <figcaption>2. IMM5645</figcaption>
+              </figure>
+              <figure class="service-form-item">
+                <a href="study-permit-guide.html"><img src="student%20visa%20form%20options/imm5709.png" alt="IMM5709"></a>
+                <figcaption>3. IMM5709</figcaption>
+              </figure>
+            </div>
+            <div class="service-desc">
+              <p>Complete step-by-step guide for study permit extension applications.</p>
+              <p>First 2 guides free, then $0.49 per guide. Or subscribe for $2.99/month.</p>
+              <a href="study-permit-guide.html" class="button-nav" target="_self">View Details</a>
+            </div>
+          </div>
+
+          <div class="service-listing service-card">
+            <p class="service-label">Visitor Visa (Visa applying)</p>
+            <h3 class="service-title">Visitor Visa Form Guide</h3>
+            <a href="visitor-visa-guide.html" class="service-hero-single"><img src="visitor%20visa%20heading%20pic.png" alt="Visitor visa"></a>
+            <p class="service-files-label">Forms included:</p>
+            <div class="service-form-thumbs">
+              <figure class="service-form-item">
+                <a href="visitor-visa-guide.html"><img src="visitor%20visa%20forms%20options/imm5257.png" alt="IMM5257"></a>
+                <figcaption>1. IMM5257</figcaption>
+              </figure>
+              <figure class="service-form-item">
+                <a href="visitor-visa-guide.html"><img src="visitor%20visa%20forms%20options/imm5475.png" alt="IMM5475"></a>
+                <figcaption>2. IMM5475</figcaption>
+              </figure>
+              <figure class="service-form-item">
+                <a href="visitor-visa-guide.html"><img src="visitor%20visa%20forms%20options/imm5645.png" alt="IMM5645"></a>
+                <figcaption>3. IMM5645</figcaption>
+              </figure>
+            </div>
+            <div class="service-desc">
+              <p>Complete step-by-step guide for visitor visa applications.</p>
+              <p>First 2 guides free, then $0.49 per guide. Or subscribe for $2.99/month.</p>
+              <a href="visitor-visa-guide.html" class="button-nav" target="_self">View Details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="element" id="cart_checkout">
+        <h3>Shopping Cart & Checkout</h3>
+        <p>Cart and payment in one area.</p>
+
+        <h4>Shopping Cart:</h4>
+        <div class="cart">
+          <h3>Shopping Cart</h3>
+          <!-- checked = pre-selected state: https://www.runoob.com/html/html-tutorial.html -->
+          <label class="cart-item">
+            <input type="checkbox" checked>
+            <p>Study Permit Extension Form Guide</p>
+            <p>$0.49</p>
+          </label>
+          <label class="cart-item">
+            <input type="checkbox" checked>
+            <p>Visitor Visa Form Guide</p>
+            <p>$0.49</p>
+          </label>
+          <p>Total: $0.98</p>
+        </div>
+
+        <h4>Checkout (Payment):</h4>
+        <div class="payment-container">
+          <form>
+            <label>
+              <input type="radio" name="payment-type" value="one-time"> One-time Purchase ($0.49 per guide)
+            </label>
+            <label>
+              <input type="radio" name="payment-type" value="subscription"> Monthly Subscription ($2.99/month, cancel anytime)
+            </label>
+            <div class="payment-section">
+              <label for="card-name">Cardholder Name:</label>
+              <input type="text" id="card-name" name="card-name" placeholder="John Doe">
+              <label for="card-number">Card Number:</label>
+              <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+            </div>
+            <label class="payment-method">
+              <input type="radio" name="payment" value="credit"> <img src="card%20payment.png" alt="Credit Card" class="payment-card-icon"> Credit Card
+            </label>
+            <label class="payment-method">
+              <input type="radio" name="payment" value="debit"> <img src="card%20payment.png" alt="Debit Card" class="payment-card-icon"> Debit Card
+            </label>
+            <button type="submit">Submit Payment</button>
+          </form>
+        </div>
+        <button type="button" class="checkout-button" style="margin-top: 1rem;">Checkout</button>
+      </section>
+
+    </section>
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+    <!-- BRANDING SECTION // -->
+    <section id="branding">
+      <h2>Branding</h2>
+
+      <section class="element">
+        <h3>What does the company do, or offer?</h3>
+        <p>FormGuide is a specialized service that provides bilingual (Chinese-English) step-by-step guides for filling out IRCC (Immigration, Refugees and Citizenship Canada) forms. We translate complex government forms, add visual markers and annotations to explain each field, and provide clear instructions in Chinese to help users complete visa applications, study permits, and other immigration documents accurately.</p>
+      </section>
+
+      <section class="element">
+        <h3>Who is the company to potential customers? (as a person)</h3>
+        <p>FormGuide is like a patient, bilingual friend who sits beside you while you fill out important forms. We are understanding, supportive, and never judgmental about language barriers. We take the time to explain every confusing field, translate technical terms into simple language, and guide you through each step with visual cues and clear instructions. We're the trusted helper who makes intimidating government paperwork feel manageable and less stressful.</p>
+      </section>
+
+      <section class="element">
+        <h3>Why might this company entice someone to purchase a product or service?</h3>
+        <p>Filling out IRCC forms incorrectly can lead to application rejections, delays, and additional costs. FormGuide eliminates the fear and confusion by providing clear, culturally-aware translations and visual guides. For Chinese elderly users and students with limited English, our service transforms a stressful, error-prone process into a confident, step-by-step journey. Users purchase our service because it saves time, reduces anxiety, increases accuracy, and ultimately helps them successfully complete their immigration applications without costly mistakes.</p>
+      </section>
+
+    </section>
+    <!-- // BRANDING SECTION -->
+
+
+
+    <!-- BRAND COMPONENTS SECTION // -->
+    <section id="brand_components">
+      <h2>Brand Components</h2>
+
+      <section class="element">
+        <h3>Fonts</h3>
+        
+        <h4>Font samples (different type styles):</h4>
+        <div class="font-sample-row">
+          <div class="font-sample-block">
+            <p class="font-sample-name">Arial (sans-serif)</p>
+            <div class="font-sample-texts" style="font-family: Arial, Helvetica, sans-serif;">
+              <p class="font-sample-heading">FormGuide</p>
+              <p class="font-sample-paragraph">The quick brown fox jumps over the lazy dog. FormGuide provides step-by-step guides for Canadian immigration forms. First 2 guides free, then $0.49 per guide or $2.99/month.</p>
+              <p class="font-sample-small">Aa Bb Cc 0123456789</p>
+            </div>
+          </div>
+          <div class="font-sample-block">
+            <p class="font-sample-name">Georgia (serif)</p>
+            <div class="font-sample-texts" style="font-family: Georgia, 'Times New Roman', serif;">
+              <p class="font-sample-heading">FormGuide</p>
+              <p class="font-sample-paragraph">The quick brown fox jumps over the lazy dog. FormGuide provides step-by-step guides for Canadian immigration forms. First 2 guides free, then $0.49 per guide or $2.99/month.</p>
+              <p class="font-sample-small">Aa Bb Cc 0123456789</p>
+            </div>
+          </div>
+          <div class="font-sample-block">
+            <p class="font-sample-name">Courier New (monospace)</p>
+            <div class="font-sample-texts" style="font-family: 'Courier New', Courier, monospace;">
+              <p class="font-sample-heading">FormGuide</p>
+              <p class="font-sample-paragraph">The quick brown fox jumps over the lazy dog. FormGuide provides step-by-step guides for Canadian immigration forms. First 2 guides free, then $0.49 per guide or $2.99/month.</p>
+              <p class="font-sample-small">Aa Bb Cc 0123456789</p>
+            </div>
+          </div>
+        </div>
+
+        <h4>Primary stack (displayed):</h4>
+        <div class="font-showcase">
+          <div class="font-item">
+            <div class="font-swatch" style="font-family: Arial, Helvetica, sans-serif;">
+              <span class="font-swatch-letters" style="font-family: Arial, Helvetica, sans-serif;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</span>
+              <span class="font-swatch-numbers" style="font-family: Arial, Helvetica, sans-serif;">0 1 2 3 4 5 6 7 8 9</span>
+              <span class="font-swatch-sentence" style="font-family: Arial, Helvetica, sans-serif;">The quick brown fox jumps over the lazy dog.</span>
+              <span class="font-swatch-body" style="font-family: Arial, Helvetica, sans-serif;">FormGuide provides step-by-step guides for Canadian immigration forms.</span>
+            </div>
+            <p class="font-swatch-label">Arial, Helvetica, sans-serif</p>
+          </div>
+        </div>
+
+        <div class="font-examples">
+          <div class="font-example">
+            <h5>Headings</h5>
+            <div class="font-example-display font-display-heading" style="font-family: Arial, Helvetica, sans-serif;">FormGuide</div>
+          </div>
+          <div class="font-example">
+            <h5>Body</h5>
+            <div class="font-example-display font-display-body" style="font-family: Arial, Helvetica, sans-serif;">The quick brown fox jumps over the lazy dog. FormGuide helps users navigate IRCC forms.</div>
+          </div>
+          <div class="font-example">
+            <h5>Navigation</h5>
+            <a href="#" class="button-nav font-display-nav">Get Started</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>Colour Palettes</h3>
+        
+        <h4>Primary Colors (Adobe Acrobat-inspired):</h4>
+        <div class="color-showcase">
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #1F4788;"></div>
+            <code>#1F4788</code>
+            <code>rgb(31, 71, 136)</code>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #2D9D78;"></div>
+            <code>#2D9D78</code>
+            <code>rgb(45, 157, 120)</code>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #6B7280;"></div>
+            <code>#6B7280</code>
+            <code>rgb(107, 114, 128)</code>
+          </div>
+        </div>
+
+        <h4>Accent Colors:</h4>
+        <div class="color-showcase">
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #D04423;"></div>
+            <code>#D04423</code>
+            <code>rgb(208, 68, 35)</code>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #F59E0B;"></div>
+            <code>#F59E0B</code>
+            <code>rgb(245, 158, 11)</code>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #FFFFFF; border: 2px solid #E5E7EB;"></div>
+            <code>#FFFFFF</code>
+            <code>rgb(255, 255, 255)</code>
+          </div>
+          <div class="color-item">
+            <div class="color-swatch" style="background-color: #1F2937;"></div>
+            <code>#1F2937</code>
+            <code>rgb(31, 41, 55)</code>
+          </div>
+        </div>
+
+        <h4>Color Usage Examples:</h4>
+        <div class="color-examples">
+          <div class="color-example">
+            <h5>Headings & Primary Actions (Adobe Blue)</h5>
+            <code>color: #1F4788;</code>
+            <div class="example-box" style="color: #1F4788; background-color: #FFFFFF; padding: 1rem; border: 2px solid #1F4788;">
+              <h3 style="margin: 0; color: #1F4788;">Trust Blue Heading</h3>
+            </div>
+          </div>
+          
+          <div class="color-example">
+            <h5>Adobe Red - Subtle Accent</h5>
+            <code>border-top: 2px solid #D04423;</code>
+            <div class="example-box" style="background-color: #FFFFFF; padding: 1rem; border: 2px solid #E5E7EB; border-top: 3px solid #D04423;">
+              <p style="margin: 0; color: #1F2937;">Adobe Red as subtle accent - trustworthy & professional</p>
+            </div>
+          </div>
+          
+          <div class="color-example">
+            <h5>Success & Submit Buttons</h5>
+            <code>background-color: #2D9D78;</code>
+            <button type="button" style="background-color: #2D9D78; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; cursor: pointer;">Support Green Button</button>
+          </div>
+          
+          <div class="color-example">
+            <h5>Secondary Text</h5>
+            <code>color: #6B7280;</code>
+            <p style="color: #6B7280; margin: 0;">Warm Gray secondary text example</p>
+          </div>
+          
+          <div class="color-example">
+            <h5>Alerts & Highlights</h5>
+            <code>background-color: #F59E0B;</code>
+            <div style="background-color: #F59E0B; color: white; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+              Alert Orange notice
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>Potential Imagery, and/or Art Direction</h3>
+        <!-- strong = strong importance (bold): https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+        <p><strong>Visual Style:</strong> Clean, minimal, and instructional. Use simple line illustrations and icons rather than complex photography.</p>
+        <p><strong>Key Imagery Concepts:</strong></p>
+        <ul>
+          <li>Step-by-step visual guides showing form fields with numbered annotations</li>
+          <li>Simple iconography representing different form types (visa, study permit, etc.)</li>
+          <li>Before/after comparisons showing a confusing form vs. our annotated, translated version</li>
+          <li>Friendly, diverse illustrations of people successfully completing forms (avoiding stock photos that feel impersonal)</li>
+          <li>Visual markers like arrows, highlights, and callout boxes to draw attention to important fields</li>
+        </ul>
+        <p><strong>Imagery Applications:</strong></p>
+        <ul>
+          <li><strong>Form Previews:</strong> Actual IRCC form images (like IMM5009E, IMM5475) with visual annotations and translations. Used in service listings to show what users will receive.</li>
+          <li><strong>Icons:</strong> Credit card icons (💳) for payment sections, form icons for different service types, checkmark icons for completed steps.</li>
+          <li><strong>Service Listings:</strong> Form preview images help users understand exactly what guide they're purchasing. Images should be clear, properly sized, and show the annotated/translated version.</li>
+          <li><strong>Payment Forms:</strong> Credit card symbols and icons help users quickly identify payment options and feel secure about transactions.</li>
+        </ul>
+        <p><strong>Art Direction:</strong> The imagery should feel supportive and educational rather than corporate or intimidating. Use soft colors, rounded shapes, and clear visual hierarchy. Avoid overwhelming users with too much information at once - imagery should guide, not confuse.</p>
+        <h4>Imagery shown (form previews + icon):</h4>
+        <p><strong>Form preview images</strong> — used in service listings:</p>
+        <div class="imagery-showcase">
+          <figure class="imagery-item">
+            <img src="visitor%20visa%20forms%20options/imm5475.png" alt="IMM5475 form" class="imagery-img">
+            <figcaption>IMM5475 — Visitor visa</figcaption>
+          </figure>
+          <figure class="imagery-item">
+            <img src="visitor%20visa%20heading%20pic.png" alt="Visitor visa" class="imagery-img">
+            <figcaption>Visitor visa — hero</figcaption>
+          </figure>
+          <figure class="imagery-item">
+            <img src="student%20visa%20heading%20pic.png" alt="Study permit" class="imagery-img">
+            <figcaption>Study permit — hero</figcaption>
+          </figure>
+          <figure class="imagery-item">
+            <img src="student%20visa%20form%20options/imm5476.png" alt="IMM5476" class="imagery-img">
+            <figcaption>IMM5476 — Study permit extension</figcaption>
+          </figure>
+        </div>
+        <p><strong>Payment icon</strong> — used beside Credit / Debit options:</p>
+        <div class="imagery-showcase imagery-showcase-icons">
+          <figure class="imagery-item">
+            <img src="card%20payment.png" alt="Credit card icon" class="imagery-icon">
+            <figcaption>Card payment icon</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>How Brand Components Work Together</h3>
+        <p>Fonts, colours, and imagery are used together to create clear hierarchy and trust. Examples below show combined use.</p>
+        
+        <h4>Example 1: Service card (font + colour + image)</h4>
+        <div class="component-combo service-card-demo">
+          <h3 class="combo-heading">Visitor Visa Form Guide</h3>
+          <img src="visitor%20visa%20forms%20options/imm5475.png" alt="Form preview" class="combo-img">
+          <p class="combo-body">Step-by-step guide for visitor visa applications. First 2 guides free, then $0.49 per guide.</p>
+          <a href="#" class="button-nav combo-cta">View Details</a>
+        </div>
+        
+        <h4>Example 2: Payment row (font + colour + icon)</h4>
+        <div class="component-combo payment-row-demo">
+          <label class="payment-option-demo">
+            <input type="radio" name="demo" checked> <img src="card%20payment.png" alt="" class="payment-card-icon"> Credit Card
+          </label>
+          <label class="payment-option-demo">
+            <input type="radio" name="demo"> <img src="card%20payment.png" alt="" class="payment-card-icon"> Debit Card
+          </label>
+        </div>
+        
+        <p><strong>Relationship:</strong> Heading font + blue colour establish the brand; body font + gray support readability; green for primary actions; red as a subtle accent. Form images and card icon reinforce trust and clarity.</p>
+      </section>
+
+    </section>
+    <!-- // BRAND COMPONENTS SECTION -->
+
+
+
+    <section id="citations">
+      <h2>Citations</h2>
+
+      <ul>
+        <li>Matteson, Steve. Designer. 2011. <strong>Open Sans [Font]</strong>. Retrieved from <a href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans">https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans</a></li>
+        <li>Google Fonts. <strong>Noto Sans SC [Font]</strong>. Retrieved from <a href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">https://fonts.google.com/noto/specimen/Noto+Sans+SC</a></li>
+      </ul>
+
+    </section>
+
+
+
+  </body>
+</html>
