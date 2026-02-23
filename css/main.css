@@ -1,6 +1,9 @@
 /*
-  STYLE GUIDE STYLING 
+  STYLE GUIDE STYLING
   FormGuide - Style Guide CSS
+  Citation note: Concepts not taught in lecture are marked with "Citation (not in lecture):"
+  and one of: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code
+  https://www.runoob.com/html/html5-syntax.html  https://www.w3schools.com/tags/tag_code.asp
   Brand Colors (Adobe Acrobat-inspired):
   - Trust Blue: #1F4788 (Adobe-inspired deep professional blue)
   - Support Green: #2D9D78 (Adobe-inspired success green)
@@ -123,6 +126,37 @@ nav {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid #E5E7EB;
+}
+
+/* Style guide nav group labels (not links): https://www.w3schools.com/tags/tag_code.asp */
+.style-guide-nav .nav-group-label {
+  width: 100%;
+  flex-basis: 100%;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: default;
+}
+.style-guide-nav .nav-group-label:first-child {
+  margin-top: 0;
+}
+
+/* Back to Style Guide link on template sub-pages: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code */
+.back-to-style-guide {
+  background-color: #2D9D78 !important;
+  border-color: #2D9D78 !important;
+  color: #FFFFFF !important;
+}
+.back-to-style-guide:hover,
+.back-to-style-guide:focus {
+  background-color: #238765 !important;
+  border-color: #238765 !important;
+  color: #FFFFFF !important;
 }
 
 nav a {
@@ -1155,6 +1189,38 @@ code {
   background-color: #1F4788;
   color: #FFFFFF;
   border-color: #1F4788;
+}
+
+/* Back to Style Guide: override .page-header nav a so the green link is visible */
+.page-header nav a.back-to-style-guide {
+  background-color: #2D9D78 !important;
+  border-color: #2D9D78 !important;
+  color: #FFFFFF !important;
+}
+.page-header nav a.back-to-style-guide:hover,
+.page-header nav a.back-to-style-guide:focus {
+  background-color: #238765 !important;
+  border-color: #238765 !important;
+  color: #FFFFFF !important;
+}
+
+/* Banner at top of page so "Back to Style Guide" is easy to see */
+.style-guide-banner {
+  background-color: #2D9D78;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+.style-guide-banner a {
+  color: #FFFFFF !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.style-guide-banner a:hover,
+.style-guide-banner a:focus {
+  text-decoration: underline;
 }
 
 /* CSS Grid for two-column layout: https://www.w3schools.com/css/css_grid.asp */

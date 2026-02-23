@@ -25,133 +25,30 @@
 
 
       <!-- nav = navigation landmark for accessibility: https://www.w3schools.com/ -->
-      <!-- First row: links to other HTML pages (Service Listing, Checkout, Contact, Updates, Feedback) -->
-      <nav>
+      <!-- Navigation order: smallest elements to more complex (per IAT339 structure). -->
+      <nav class="style-guide-nav">
+        <span class="nav-group-label">Style guide (smallest → complex):</span>
+        <a href="#text_elements">Text Elements</a>
+        <a href="#interactive_elements">Interactive Elements</a>
+        <a href="#combined_elements">Combined Elements</a>
+        <a href="#branding">Branding</a>
+        <a href="#brand_components">Brand Components</a>
+        <a href="#citations">Citations</a>
+        <span class="nav-group-label">Template pages:</span>
         <a href="services.html">Service Listing</a>
         <a href="checkout.html">Shopping Cart &amp; Checkout</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="updates.html">Updates</a>
         <a href="feedback.html">Feedback</a>
-        <a href="#interactive_elements">Interactive Elements</a>
-        <a href="#text_elements">Text Elements</a>
-        <a href="#combined_elements">Combined Elements</a>
-        <a href="#branding">Branding</a>
-        <a href="#brand_components">Brand Components</a>
-        <a href="#citations">Citations</a>
       </nav>
 
     </header>
 
-    <!-- id creates anchor target for in-page links: https://www.runoob.com/html/html-tutorial.html -->
-    <!-- INTERACTIVE ELEMENTS SECTION // -->
-    <section id="interactive_elements">
-      <h2>Interactive Elements</h2>
+    <!-- Citation (not in lecture): id creates anchor target for in-page links. https://www.runoob.com/html/html5-syntax.html -->
+    <!-- Order: smallest to complex (Text → Interactive → Combined → Branding → Brand Components → Citations). -->
 
-
-      <section class="element">
-        <h3>In-text link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>a</p>
-
-        <h4>Sample code:</h4>
-        <!-- <code> marks short computer code; use <pre> for multi-line: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
-        <code>&lt;p&gt;Visit our &lt;a href="#"&gt;guide page&lt;/a&gt; for more information.&lt;/p&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <p>Visit our <a href="#">guide page</a> for more information.</p>
-      </section>
-
-
-      <section class="element">
-        <h3>Navigation Link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>.button-nav</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;a href="#" class="button-nav"&gt;Get Started&lt;/a&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <a class="button-nav" href="#">Get Started</a>
-      </section>
-
-
-      <section class="element">
-        <h3>Submit/Reset Buttons</h3>
-
-        <h4>CSS selector:</h4>
-        <p>button[type="submit"], button[type="reset"]</p>
-
-        <h4>Sample code:</h4>
-        <!-- type="submit" vs type="reset" on buttons: https://www.w3schools.com/ -->
-        <code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;<br>&lt;button type="reset"&gt;Reset Form&lt;/button&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <button type="submit">Submit Form</button>
-        <button type="reset">Reset Form</button>
-      </section>
-
-
-      <section class="element">
-        <h3>Text Input Field with Label</h3>
-
-        <h4>CSS selector:</h4>
-        <p>input[type="text"], label</p>
-
-        <!-- for/id link label to input; placeholder shows hint: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
-        <h4>Sample code:</h4>
-        <code>&lt;label for="name"&gt;Full Name:&lt;/label&gt;<br>&lt;input type="text" id="name" name="name" placeholder="Enter your name"&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
-      </section>
-
-
-      <section class="element">
-        <h3>Radio Button with Label</h3>
-
-        <h4>CSS selector:</h4>
-        <p>input[type="radio"], label</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;label&gt;<br>&nbsp;&nbsp;&lt;input type="radio" name="language" value="chinese"&gt; Chinese<br>&lt;/label&gt;<br>&lt;label&gt;<br>&nbsp;&nbsp;&lt;input type="radio" name="language" value="english"&gt; English<br>&lt;/label&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <label>
-          <input type="radio" name="language" value="chinese"> Chinese
-        </label>
-        <label>
-          <input type="radio" name="language" value="english"> English
-        </label>
-      </section>
-
-
-      <section class="element">
-        <h3>Image as a Link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>a img</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;a href="#"&gt;&lt;img src="visitor visa.png" alt="Form preview"&gt;&lt;/a&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <a href="#form-guide">
-          <!-- alt text for accessibility when image fails or for screen readers: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
-          <img src="visitor%20visa%20heading%20pic.png" alt="IRCC Form Example - Click to view guide" style="max-width: 300px;">
-        </a>
-      </section>
-
-
-    </section>
-    <!-- // INTERACTIVE ELEMENTS SECTION -->
-
-
-
-    <!-- TEXT ELEMENTS SECTION // -->
+    <!-- TEXT ELEMENTS SECTION (smallest / base) // -->
     <section id="text_elements">
       <h2>Text Elements</h2>
 
@@ -204,6 +101,113 @@
 
     </section>
     <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+      <h2>Interactive Elements</h2>
+
+
+      <section class="element">
+        <h3>In-text link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>a</p>
+
+        <h4>Sample code:</h4>
+        <!-- Citation (not in lecture): <code> for short code; use <pre> for multi-line. https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+        <code>&lt;p&gt;Visit our &lt;a href="#"&gt;guide page&lt;/a&gt; for more information.&lt;/p&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <p>Visit our <a href="#">guide page</a> for more information.</p>
+      </section>
+
+
+      <section class="element">
+        <h3>Navigation Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-nav</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#" class="button-nav"&gt;Get Started&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a class="button-nav" href="#">Get Started</a>
+      </section>
+
+
+      <section class="element">
+        <h3>Submit/Reset Buttons</h3>
+
+        <h4>CSS selector:</h4>
+        <p>button[type="submit"], button[type="reset"]</p>
+
+        <h4>Sample code:</h4>
+        <!-- type="submit" vs type="reset" on buttons: https://www.w3schools.com/ -->
+        <code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;<br>&lt;button type="reset"&gt;Reset Form&lt;/button&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset Form</button>
+      </section>
+
+
+      <section class="element">
+        <h3>Text Input Field with Label</h3>
+
+        <h4>CSS selector:</h4>
+        <p>input[type="text"], label</p>
+
+        <!-- Citation (not in lecture): for/id links label to input; placeholder shows hint. https://www.w3schools.com/tags/tag_code.asp -->
+        <h4>Sample code:</h4>
+        <code>&lt;label for="name"&gt;Full Name:&lt;/label&gt;<br>&lt;input type="text" id="name" name="name" placeholder="Enter your name"&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+      </section>
+
+
+      <section class="element">
+        <h3>Radio Button with Label</h3>
+
+        <h4>CSS selector:</h4>
+        <p>input[type="radio"], label</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;label&gt;<br>&nbsp;&nbsp;&lt;input type="radio" name="language" value="chinese"&gt; Chinese<br>&lt;/label&gt;<br>&lt;label&gt;<br>&nbsp;&nbsp;&lt;input type="radio" name="language" value="english"&gt; English<br>&lt;/label&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <label>
+          <input type="radio" name="language" value="chinese"> Chinese
+        </label>
+        <label>
+          <input type="radio" name="language" value="english"> English
+        </label>
+      </section>
+
+
+      <section class="element">
+        <h3>Image as a Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>a img</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#"&gt;&lt;img src="visitor visa.png" alt="Form preview"&gt;&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a href="#form-guide">
+          <!-- alt text for accessibility when image fails or for screen readers: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code -->
+          <img src="visitor%20visa%20heading%20pic.png" alt="IRCC Form Example - Click to view guide" style="max-width: 300px;">
+        </a>
+      </section>
+
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
 
 
 
@@ -600,9 +604,14 @@
     <section id="citations">
       <h2>Citations</h2>
 
+      <p><strong>Concepts not taught in lecture</strong> are marked in the HTML and CSS with inline citation comments (e.g. “Citation:” or “not in lecture”) and one of the three references below.</p>
+
       <ul>
         <li>Matteson, Steve. Designer. 2011. <strong>Open Sans [Font]</strong>. Retrieved from <a href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans">https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans</a></li>
         <li>Google Fonts. <strong>Noto Sans SC [Font]</strong>. Retrieved from <a href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">https://fonts.google.com/noto/specimen/Noto+Sans+SC</a></li>
+        <li>MDN. <strong>&lt;code&gt;: 行内代码元素 (HTML)</strong>. Retrieved from <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/code</a></li>
+        <li>W3Schools. <strong>HTML code tag</strong>. Retrieved from <a href="https://www.w3schools.com/tags/tag_code.asp">https://www.w3schools.com/tags/tag_code.asp</a></li>
+        <li>菜鸟教程 (Runoob). <strong>HTML(5) 代码规范</strong>. Retrieved from <a href="https://www.runoob.com/html/html5-syntax.html">https://www.runoob.com/html/html5-syntax.html</a></li>
       </ul>
 
     </section>
