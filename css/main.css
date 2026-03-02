@@ -1221,6 +1221,25 @@ code {
 .style-guide-banner a:hover,
 .style-guide-banner a:focus {
   text-decoration: underline;
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+/* Footer: semantic end of page */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid #E5E7EB;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+footer a {
+  color: #1F4788;
+}
+footer a:focus {
+  outline: 2px solid #1F4788;
+  outline-offset: 2px;
 }
 
 /* CSS Grid for two-column layout: https://www.w3schools.com/css/css_grid.asp */

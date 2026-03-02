@@ -39,13 +39,13 @@
           <div class="cart">
             <h3>Shopping Cart</h3>
             <!-- checked = pre-selected state: https://www.runoob.com/html/html-tutorial.html -->
-            <label class="cart-item">
-              <input type="checkbox" checked>
+            <label class="cart-item" for="cart-study">
+              <input type="checkbox" id="cart-study" checked aria-label="Study Permit Extension Form Guide">
               <p>Study Permit Extension Form Guide</p>
               <p>$0.49</p>
             </label>
-            <label class="cart-item">
-              <input type="checkbox" checked>
+            <label class="cart-item" for="cart-visitor">
+              <input type="checkbox" id="cart-visitor" checked aria-label="Visitor Visa Form Guide">
               <p>Visitor Visa Form Guide</p>
               <p>$0.49</p>
             </label>
@@ -59,19 +59,19 @@
           <!-- action = submit URL; method = get or post: https://www.runoob.com/html/html5-syntax.html -->
           <form action="#" method="get">
             <p><strong>Payment plan</strong></p>
-            <label class="payment-method">
-              <input type="radio" name="payment-plan" value="one-time" checked> One-time purchase ($0.49 per guide)
+            <label class="payment-method" for="plan-one-time">
+              <input type="radio" name="payment-plan" id="plan-one-time" value="one-time" checked> One-time purchase ($0.49 per guide)
             </label>
-            <label class="payment-method">
-              <input type="radio" name="payment-plan" value="monthly"> Monthly payment ($2.99/month, cancel anytime)
+            <label class="payment-method" for="plan-monthly">
+              <input type="radio" name="payment-plan" id="plan-monthly" value="monthly"> Monthly payment ($2.99/month, cancel anytime)
             </label>
 
             <p><strong>Payment method</strong></p>
-            <label class="payment-method">
-              <input type="radio" name="payment-card" value="visa" checked> Visa
+            <label class="payment-method" for="card-visa">
+              <input type="radio" name="payment-card" id="card-visa" value="visa" checked> Visa
             </label>
-            <label class="payment-method">
-              <input type="radio" name="payment-card" value="mastercard"> Mastercard
+            <label class="payment-method" for="card-mastercard">
+              <input type="radio" name="payment-card" id="card-mastercard" value="mastercard"> Mastercard
             </label>
 
             <!-- for/id link label to input for accessibility: https://www.w3schools.com/tags/tag_code.asp -->
@@ -96,6 +96,11 @@
         </div>
       </div>
     </main>
+
+    <footer>
+      <p><a href="index.html">Style Guide</a> · <a href="contact.html">Contact</a></p>
+      <p><small>© FormGuide</small></p>
+    </footer>
 
   </body>
 </html>

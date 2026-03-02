@@ -1206,6 +1206,25 @@ code {
 .style-guide-banner a:hover,
 .style-guide-banner a:focus {
   text-decoration: underline;
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+/* Footer: semantic end of page */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid #E5E7EB;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+footer a {
+  color: #1F4788;
+}
+footer a:focus {
+  outline: 2px solid #1F4788;
+  outline-offset: 2px;
 }
 
 /* Two-column layout: cart left, checkout form right; gap = space between columns: https://www.runoob.com/html/html-tutorial.html */
