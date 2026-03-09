@@ -165,8 +165,8 @@ nav a {
   background-color: #FFFFFF;
   border: 2px solid #1F4788;
   font-weight: 500;
-  /* Citation (not in lecture): CSS transition for smooth animation. https://www.runoob.com/html/html5-syntax.html */
-  transition: all 0.3s ease;
+  /* Be specific with transition (not "all") to avoid latency: https://www.runoob.com/css/css3-transitions.html */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -193,7 +193,7 @@ a {
   color: #1F4788;
   text-decoration: underline;
   text-decoration-color: #1F4788;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 /* Ensure text links in paragraphs remain visible */
@@ -215,7 +215,7 @@ p a:focus {
   border-radius: 6px;
   font-weight: 500;
   border: 2px solid #1F4788;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   margin: 0.25rem;
 }
 
@@ -240,7 +240,7 @@ button[type="submit"] {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   margin-top: 1rem;
 }
 
@@ -260,7 +260,7 @@ button[type="reset"] {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: 1rem;
   margin-left: 0.5rem;
 }
@@ -282,7 +282,7 @@ input[type="text"] {
   font-size: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
   display: block;
 }
 
@@ -345,7 +345,7 @@ label:has(input[type="radio"]):hover {
 a img {
   border: 3px solid #E5E7EB;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
   max-width: 100%;
   height: auto;
 }
@@ -542,7 +542,7 @@ form {
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   margin-top: 1rem;
 }
 
@@ -617,7 +617,7 @@ form h4 {
   border-radius: 6px;
   border-left: 4px solid #2D9D78;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
   gap: 1rem;
 }
 
