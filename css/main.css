@@ -165,7 +165,6 @@ nav a {
 nav a:hover,
 nav a:focus {
   background-color: #1F4788;
-  border-color: #1F4788;
   color: #FFFFFF !important;
   /* transform: translateY() moves element up/down: https://www.w3schools.com/css/css3_2dtransforms.asp */
   transform: translateY(-2px);
@@ -212,7 +211,6 @@ p a:focus {
 .button-nav:hover,
 .button-nav:focus {
   background-color: #2D9D78;
-  border-color: #2D9D78;
   color: #FFFFFF !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(45, 157, 120, 0.3);
@@ -1175,19 +1173,16 @@ code {
 .page-header nav a:focus {
   background-color: #1F4788;
   color: #FFFFFF;
-  border-color: #1F4788;
 }
 
 /* Back to Style Guide: override .page-header nav a so the green link is visible */
 .page-header nav a.back-to-style-guide {
   background-color: #2D9D78 !important;
-  border-color: #2D9D78 !important;
   color: #FFFFFF !important;
 }
 .page-header nav a.back-to-style-guide:hover,
 .page-header nav a.back-to-style-guide:focus {
   background-color: #238765 !important;
-  border-color: #238765 !important;
   color: #FFFFFF !important;
 }
 
